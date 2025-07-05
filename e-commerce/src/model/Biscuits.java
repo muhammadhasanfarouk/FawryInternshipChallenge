@@ -1,12 +1,14 @@
 package model;
 
+import model.interfaces.Expirable;
+
 import java.time.LocalDate;
 
 public class Biscuits implements Expirable {
-    String name;
-    double price;
-    int quantity;
-    LocalDate expiryDate;
+    private String name;
+    private double price;
+    private int quantity;
+    private LocalDate expiryDate;
 
     public Biscuits(String name, double price, int quantity, LocalDate expiryDate) {
         this.name = name;

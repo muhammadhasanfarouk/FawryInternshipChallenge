@@ -1,10 +1,12 @@
 package model;
 
+import model.interfaces.Shippable;
+
 public class TV implements Shippable {
-    String name;
-    double price;
-    int quantity;
-    double weight;
+    private String name;
+    private double price;
+    private int quantity;
+    private double weight;
 
     public TV(String name, double price, int quantity, int weight) {
         this.name = name;

@@ -1,16 +1,16 @@
 package services;
 
-import model.Product;
-import model.Shippable;
+import model.interfaces.Product;
+import model.interfaces.Shippable;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShippingServiceX implements ShippingService {
-    String name;
-    double weight = 0;
-    List<AbstractMap.SimpleEntry<Product, Integer>> list = new ArrayList<>();
+    private String name;
+    private double weight = 0;
+    private List<AbstractMap.SimpleEntry<Product, Integer>> list = new ArrayList<>();
 
     public ShippingServiceX(String name, List<AbstractMap.SimpleEntry<Product, Integer>> list) {
         this.name = name;

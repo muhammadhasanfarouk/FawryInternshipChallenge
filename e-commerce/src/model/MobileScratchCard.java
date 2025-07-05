@@ -1,11 +1,13 @@
 package model;
 
-public class MobileScratchcCard implements Product {
-    String name;
-    double price;
-    int quantity;
+import model.interfaces.Product;
 
-    public MobileScratchcCard(String name, double price, int quantity) {
+public class MobileScratchCard implements Product {
+    private String name;
+    private double price;
+    private int quantity;
+
+    public MobileScratchCard(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;

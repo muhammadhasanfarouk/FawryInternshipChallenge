@@ -1,5 +1,3 @@
-package main;
-
 import model.*;
 
 import java.time.LocalDate;
@@ -10,7 +8,7 @@ public class Main {
         Cheese Cheddar = new Cheese("cheddar", 200, 400, 100, LocalDate.of(2025, 7, 25));
         Cheese Guda = new Cheese("Guda", 120, 300, 100, LocalDate.of(2025, 7, 22));
         TV oledTV = new TV("oled model.TV", 20000, 50, 750);
-        MobileScratchcCard scratchcCard = new MobileScratchcCard("Fawry", 10, 100);
+        MobileScratchCard scratchcCard = new MobileScratchCard("Fawry", 10, 100);
         Biscuits biscuits = new Biscuits("Bisco", 5, 136, LocalDate.of(2025, 9, 10));
 
         Muhammad.addProduct(Cheddar, 2);

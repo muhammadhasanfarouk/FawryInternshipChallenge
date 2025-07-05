@@ -1,22 +1,21 @@
-package utils;
+package services;
 
 import model.Cart;
-import model.Product;
-import model.Shippable;
-import services.ShippingService;
-import services.ShippingServiceX;
+import model.interfaces.Product;
+import model.interfaces.Shippable;
+import utils.ConsolePrint;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Checkout {
-    double balance;
-    double shippingPrice = 0;
-    ShippingService shippingServiceX;
-    Cart cart;
-    String name;
-    ConsolePrint consolePrint;
+    private String name;
+    private double balance;
+    private double shippingPrice = 0;
+    private Cart cart;
+    private ConsolePrint consolePrint;
+    private ShippingService shippingServiceX;
 
     public Checkout(String name, double balance, Cart cart, ConsolePrint consolePrint) {
         this.name = name;

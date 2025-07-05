@@ -1,8 +1,8 @@
 package utils;
 
 import model.Cart;
-import model.Product;
-import model.Shippable;
+import model.interfaces.Product;
+import model.interfaces.Shippable;
 
 public class ConsolePrint {
     public void printCheckoutDetails(Cart cart, double weight, double balance, double shippingPrice, double totalPrice) {
@@ -17,7 +17,7 @@ public class ConsolePrint {
             Product product = cart.getList().get(i).getKey();
             int quantity = cart.getList().get(i).getValue();
             if (product instanceof Shippable) {
-//                System.out.println(quantity + "X" + product.getName() + "      " + (((model.Shippable) product).getWeight() * quantity) + "g");
+//                System.out.println(quantity + "X" + product.getName() + "      " + (((model.interfaces.Shippable) product).getWeight() * quantity) + "g");
                 System.out.printf("%-20s %10.2fg%n", quantity + "x " + product.getName(), ((Shippable) product).getWeight() * quantity);
             }
         }
@@ -26,7 +26,7 @@ public class ConsolePrint {
 
     private void printCheckoutReceipt(Cart cart, double balance, double shippingPrice, double totalPrice) {
         System.out.println("--------------------------------");
-        System.out.println("** utils.Checkout receipt **");
+        System.out.println("** services.Checkout receipt **");
         for (int i = 0; i < cart.getList().size(); i++) {
             Product product = cart.getList().get(i).getKey();
             int quantity = cart.getList().get(i).getValue();
